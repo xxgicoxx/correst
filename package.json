@@ -1,8 +1,8 @@
 {
   "name": "correst",
   "displayName": "Correst",
-  "version": "2.0.0",
-  "description": "Web Service REST for track Correios objects",
+  "version": "2.0.1",
+  "description": "REST Web Service for track Correios objects",
   "author": "Giovani de Oliveira <giovanioliveira@outlook.com.br>",
   "license": "MIT",
   "main": "app.js",

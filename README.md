@@ -1,5 +1,5 @@
 # Correst
-Web Service REST for track Correios objects.
+REST Web Service for track Correios objects.
 
 ### Prerequisites
 * [Node.js](https://nodejs.org/en/) - Node.js
