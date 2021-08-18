@@ -1,20 +1,21 @@
+require('dotenv').config();
+
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
 const helmet = require('helmet');
-const bodyParser = require('body-parser');
 
-const expressConfig = require('./app/configs/express');
-const track = require('./app/routes/track');
+const expressConfig = require('./server/configs/express');
+const track = require('./server/routes/track');
 
 const app = express();
 
 app.use(cors({ origin: '*' }));
 app.use(logger('dev'));
 app.use(helmet({ hidePoweredBy: true }));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/track', track);
 

@@ -1,13 +1,21 @@
 # Correst
 REST Web Service for track Correios objects.
 
-### Prerequisites
-* [Node.js](https://nodejs.org/en/) - Node.js
+<p align="center">
+  <img src="assets/imgs/correios.png">
+</p>
 
-### Running
-The server can be run locally and also deployed to your own server.
+# Prerequisites
+* [Node.js](https://nodejs.org/en/)
 
-### Run
+# Running
+### 1. Configure
+````
+# Web Service
+Create and configure .env file like .env.example.
+````
+
+### 2. Run
 ````
 # Install dependencies
 npm install
@@ -16,12 +24,12 @@ npm install
 npm start
 ````
 
-### cURL Example
+# Example
 ````
 curl --location --request GET 'http://localhost:3000/track/PX547037143BR'
 ````
 
-### Response example
+# Response example
 ```json
 {
   "code": "PX547037143BR",
@@ -44,8 +52,8 @@ curl --location --request GET 'http://localhost:3000/track/PX547037143BR'
 }
 ```
 
-### Built With
+# Built With
 * [Node.js](https://nodejs.org/en/)
 
-### Authors
-* **Giovani de Oliveira** - [xxgicoxx](https://github.com/xxgicoxx)
+# Authors
+* [xxgicoxx](https://github.com/xxgicoxx)
