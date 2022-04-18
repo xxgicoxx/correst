@@ -1,7 +1,7 @@
 const express = require('express');
 const { param } = require('express-validator');
 
-const track = require('../service/track');
+const track = require('../services/track');
 
 const routes = express();
 
