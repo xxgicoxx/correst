@@ -1,6 +1,8 @@
 const { validationResult } = require('express-validator');
 const Correios = require('correios.js');
 
+const logger = require('../../logger');
+
 const correios = new Correios();
 
 async function get(req, res) {
@@ -8,6 +10,8 @@ async function get(req, res) {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
+      logger.error(errors.array()[0].msg);
+
       return res.status(422).send({ error: errors.array()[0].msg });
     }
 
@@ -16,7 +20,7 @@ async function get(req, res) {
 
     return res.status(200).send(object);
   } catch (error) {
-    console.log(error);
+    logger.error(error.message);
 
     return res.status(500).send({ error: 'Error, try again later' });
   }
