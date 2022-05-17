@@ -10,8 +10,6 @@ async function get(req, res) {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      logger.error(errors.array()[0].msg);
-
       return res.status(422).send({ error: errors.array()[0].msg });
     }
 
@@ -20,7 +18,7 @@ async function get(req, res) {
 
     return res.status(200).send(object);
   } catch (error) {
-    logger.error(error.message);
+    logger.error(error);
 
     return res.status(500).send({ error: 'Error, try again later' });
   }
